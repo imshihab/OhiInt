@@ -11,10 +11,11 @@ import Network from "../components/Network";
 import Testimonials from "../components/Testimonials";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 import { useEffect } from "react";
 
 export default function Landing() {
-    const { data, loading } = useContent();
+    const { data, loading, error } = useContent();
 
     useEffect(() => {
         if (data?.siteTitle) {
@@ -22,10 +23,27 @@ export default function Landing() {
         }
     }, [data?.siteTitle]);
 
-    if (loading) {
+    // First-ever load (no cache yet): show full-page loader.
+    if (loading && !data) {
+        return <Loader />;
+    }
+
+    // No cache + fetch failed: show a clear error instead of crashing.
+    if (!data) {
         return (
-            <div className="min-h-screen flex items-center justify-center text-gray-500">
-                Loading...
+            <div className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+                <h1 className="text-2xl font-bold text-gray-800 mb-2">
+                    Unable to load content
+                </h1>
+                <p className="text-gray-500 mb-4">
+                    {error || "Please check your connection and try again."}
+                </p>
+                <button
+                    onClick={() => window.location.reload()}
+                    className="px-4 py-2 rounded bg-accent text-white font-medium hover:opacity-90"
+                >
+                    Retry
+                </button>
             </div>
         );
     }

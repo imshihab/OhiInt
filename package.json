@@ -12,6 +12,7 @@
   "dependencies": {
     "@libsql/client": "^0.17.4",
     "@tailwindcss/vite": "^4.3.3",
+    "esmls": "^0.1.50",
     "framer-motion": "^12.43.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",

@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+
+
+@theme {
+    --color-primary: #082340;
+    --color-primary-light: #1a4d7a;
+    --color-accent: #4fb3f7;
+
+    /* Neobrutalist palette */
+    --color-neo-bg: #F5F2EB;
+    --color-neo-black: #121212;
+    --color-neo-yellow: #FACC15;
+    --color-neo-blue: #2563EB;
+    --color-neo-green: #22C55E;
+    --color-neo-red: #DC2626;
+    --color-neo-gray: #D4D4D4;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.nav-container {
+                    width: 100%;
+                    max-width: 1440px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-left: 1.25rem;
+                    padding-right: 1.25rem;
+                }
+                @media (min-width: 768px) {
+                    .nav-container {
+                        padding-left: 2rem;
+                        padding-right: 2rem;
+                    }
+                }
+                @media (min-width: 1024px) {
+                    .nav-container {
+                        padding-left: 4rem;
+                        padding-right: 4rem;
+                    }
+                }
+
+.container-custom {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem
+}
+
+@media(min-width: 480px) {
+    .container-custom {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem
+    }
+}
+
+@media(min-width: 640px) {
+    .container-custom {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem
+    }
+}
+
+@media(min-width: 768px) {
+    .container-custom {
+        max-width: 48rem;
+        padding-left: 2rem;
+        padding-right: 2rem
+    }
+}
+
+@media(min-width: 1070px) {
+    .container-custom {
+        max-width: 1000px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem
+    }
+}
+
+@media(min-width: 1024px) {
+    .container-custom {
+        max-width: 64rem;
+        padding-left: 2rem;
+        padding-right: 2rem
+    }
+}
+
+@media(min-width: 1280px) {
+    .container-custom {
+        max-width: 80rem;
+        padding-left: 3rem;
+        padding-right: 3rem
+    }
+}
+
+
+.section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem
+}
+
+@media(min-width: 640px) {
+    .section-padding {
+        padding-top: 4rem;
+        padding-bottom: 4rem
+    }
+}
+
+@media(min-width: 768px) {
+    .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem
+    }
+}
+
+@media(min-width: 1070px) {
+    .section-padding {
+        padding-top: 4rem;
+        padding-bottom: 4rem
+    }
+}
+
+@media(min-width: 1024px) {
+    .section-padding {
+        padding-top: 6rem;
+        padding-bottom: 6rem
+    }
+}
+
+@media(min-width: 1280px) {
+    .section-padding {
+        padding-top: 8rem;
+        padding-bottom: 8rem
+    }
+}
+
+
+.mouse-scroll-container {
+    animation: mouseFloat 1s ease-in-out infinite;
+}
+
+.scroll-mouse {
+    animation: scrollMouse 1s ease-in-out infinite;
+}
+
+@keyframes mouseFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+@keyframes scrollMouse {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+.btn {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 2rem;
+    padding-right: 2rem
+}
+
+/* Neobrutalist: hard drop shadows + base background */
+@layer base {
+    body {
+        background-color: var(--color-neo-bg);
+        color: var(--color-neo-black);
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+@layer utilities {
+    .shadow-neo {
+        box-shadow: 4px 4px 0px 0px var(--color-neo-black);
+    }
+    .shadow-neo-sm {
+        box-shadow: 2px 2px 0px 0px var(--color-neo-black);
+    }
+    .shadow-neo-hover {
+        box-shadow: 6px 6px 0px 0px var(--color-neo-black);
+    }
+}

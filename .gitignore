@@ -27,3 +27,5 @@ dist-ssr
 # cloudflare
 .dev.vars
 .wrangler
+.vercel
+.env*

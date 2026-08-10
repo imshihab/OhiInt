@@ -223,7 +223,7 @@ export default function Hero({ data }) {
                 >
                     <motion.img
                         alt="hero logo"
-                        className="h-16 sm:h-18 md:h-20 w-auto object-contain mx-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.25)] brightness-0 invert"
+                        className="h-16 sm:h-18 md:h-28 w-auto object-contain mx-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.25)] brightness-0 invert"
                         src={data.logo}
                         animate={{ y: [0, -8, 0] }}
                         transition={{
@@ -234,7 +234,7 @@ export default function Hero({ data }) {
                     />
                 </motion.div>
 
-                <motion.h1 className="text-4xl sm:text-5xl md:text-6xl custom:text-5xl lg:text-7xl xl:text-8xl font-serif font-light text-white mb-3 sm:mb-4 tracking-wider text-center px-4">
+                <motion.h1 className="text-4xl sm:text-5xl md:text-6xl custom:text-5xl lg:text-7xl xl:text-8xl font-serif font-light text-white mb-3 sm:mb-4 tracking-wider text-center px-4 uppercase">
                     <motion.span
                         className="inline-block"
                         variants={titleLeftVariants}

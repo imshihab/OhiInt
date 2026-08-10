@@ -223,7 +223,7 @@ export default function Hero({ data }) {
                 >
                     <motion.img
                         alt="hero logo"
-                        className="h-16 sm:h-18 md:h-20 w-auto object-contain mx-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.25)]"
+                        className="h-16 sm:h-18 md:h-20 w-auto object-contain mx-auto drop-shadow-[0_0_25px_rgba(255,255,255,0.25)] brightness-0 invert"
                         src={data.logo}
                         animate={{ y: [0, -8, 0] }}
                         transition={{

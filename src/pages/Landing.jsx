@@ -19,7 +19,7 @@ export default function Landing() {
 
     useEffect(() => {
         if (data?.siteTitle) {
-            document.title = data.siteTitle;
+            document.title = data.siteTitle.toUpperCase();
         }
     }, [data?.siteTitle]);
 

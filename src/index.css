@@ -29,25 +29,27 @@ body {
 }
 
 .nav-container {
-                    width: 100%;
-                    max-width: 1440px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    padding-left: 1.25rem;
-                    padding-right: 1.25rem;
-                }
-                @media (min-width: 768px) {
-                    .nav-container {
-                        padding-left: 2rem;
-                        padding-right: 2rem;
-                    }
-                }
-                @media (min-width: 1024px) {
-                    .nav-container {
-                        padding-left: 4rem;
-                        padding-right: 4rem;
-                    }
-                }
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .nav-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
 
 .container-custom {
     margin-left: auto;
@@ -194,9 +196,11 @@ body {
     .shadow-neo {
         box-shadow: 4px 4px 0px 0px var(--color-neo-black);
     }
+
     .shadow-neo-sm {
         box-shadow: 2px 2px 0px 0px var(--color-neo-black);
     }
+
     .shadow-neo-hover {
         box-shadow: 6px 6px 0px 0px var(--color-neo-black);
     }
@@ -206,6 +210,7 @@ body {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -216,6 +221,7 @@ body {
         opacity: 0.6;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.05);
@@ -227,6 +233,7 @@ body {
         transform: scale(0.6);
         opacity: 0.4;
     }
+
     40% {
         transform: scale(1);
         opacity: 1;
